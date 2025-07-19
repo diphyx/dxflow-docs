@@ -1,1 +1,299 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dxflow Engine –</title><link>https://www.dxflow.ai/cli/</link><description>Recent content on dxflow Engine</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.dxflow.ai/cli/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dxflow Engine –</title><link>https://www.dxflow.ai/cli/</link><description>Recent content on dxflow Engine</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://www.dxflow.ai/cli/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://www.dxflow.ai/cli/engine/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.dxflow.ai/cli/engine/</guid><description>
+&lt;h1>&lt;code>dxflow engine&lt;/code>&lt;/h1>&lt;p>The &lt;code>dxflow engine&lt;/code> command provides comprehensive tools for managing the engine, including boot control, health checks, authorized key management, pinging the engine, and generating tokens. Below is a detailed breakdown of each subcommand and its options.&lt;/p>
+&lt;hr>
+&lt;h2>dxflow Engine Management&lt;span class="hx-absolute -hx-mt-20" id="dxflow-engine-management">&lt;/span>
+&lt;a href="#dxflow-engine-management" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis">&lt;/span>
+&lt;a href="#synopsis" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Engine management commands for &lt;code>dxflow&lt;/code>.&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options">&lt;/span>
+&lt;a href="#options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the engine command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3>Inherited Options&lt;span class="hx-absolute -hx-mt-20" id="inherited-options">&lt;/span>
+&lt;a href="#inherited-options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>config-profile&lt;/strong> (&lt;code>-C&lt;/code>): Specifies the configuration profile to use. Default: &lt;code>default&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>log-level&lt;/strong> (&lt;code>-L&lt;/code>): Sets the log level. Options: &lt;code>debug&lt;/code>, &lt;code>error&lt;/code>, &lt;code>disabled&lt;/code>. Default: &lt;code>disabled&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>no-color&lt;/strong> (&lt;code>-N&lt;/code>): Disables color output. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3>See Also&lt;span class="hx-absolute -hx-mt-20" id="see-also">&lt;/span>
+&lt;a href="#see-also" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;code>dxflow engine boot&lt;/code>: Engine boot control.&lt;/li>
+&lt;li>&lt;code>dxflow engine healthcheck&lt;/code>: Check the engine health.&lt;/li>
+&lt;li>&lt;code>dxflow engine key&lt;/code>: Authorized key control.&lt;/li>
+&lt;li>&lt;code>dxflow engine ping&lt;/code>: Send ping to the engine.&lt;/li>
+&lt;li>&lt;code>dxflow engine token&lt;/code>: Generate authorized token.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow engine Boot&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-engine-boot">&lt;/span>
+&lt;a href="#dxflow-engine-boot" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-1">&lt;/span>
+&lt;a href="#synopsis-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Controls the boot state of the engine.&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-1">&lt;/span>
+&lt;a href="#options-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the boot command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h2>&lt;code>dxflow engine healthcheck&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-engine-healthcheck">&lt;/span>
+&lt;a href="#dxflow-engine-healthcheck" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-2">&lt;/span>
+&lt;a href="#synopsis-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Checks the health of the engine.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage">&lt;/span>
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;code>dxflow engine healthcheck [flags]&lt;/code>&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-2">&lt;/span>
+&lt;a href="#options-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the healthcheck command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h2>&lt;code>dxflow engine key&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-engine-key">&lt;/span>
+&lt;a href="#dxflow-engine-key" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-3">&lt;/span>
+&lt;a href="#synopsis-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Manages authorized keys for the engine.&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-3">&lt;/span>
+&lt;a href="#options-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the key command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow engine ping&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-engine-ping">&lt;/span>
+&lt;a href="#dxflow-engine-ping" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-4">&lt;/span>
+&lt;a href="#synopsis-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Sends a ping to the engine.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-1">&lt;/span>
+&lt;a href="#usage-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;code>dxflow engine ping [flags]&lt;/code>&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-4">&lt;/span>
+&lt;a href="#options-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>count&lt;/strong> (&lt;code>-c&lt;/code>): Specifies the number of pings to send. Default: &lt;code>3&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the ping command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow engine token&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-engine-token">&lt;/span>
+&lt;a href="#dxflow-engine-token" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-5">&lt;/span>
+&lt;a href="#synopsis-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Generates an authorized token for the engine.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-2">&lt;/span>
+&lt;a href="#usage-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;code>dxflow engine token [flags]&lt;/code>&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-5">&lt;/span>
+&lt;a href="#options-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the token command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr></description></item><item><title/><link>https://www.dxflow.ai/cli/file_system/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.dxflow.ai/cli/file_system/</guid><description>
+&lt;h1>&lt;code>dxflow fs&lt;/code>&lt;/h1>&lt;p>The &lt;code>dxflow fs&lt;/code> command provides a suite of subcommands to manage filesystem objects. You can create, delete, download, list, rename, share, unzip, upload, and zip filesystem objects.&lt;/p>
+&lt;hr>
+&lt;h2>dxflow File System Management&lt;span class="hx-absolute -hx-mt-20" id="dxflow-file-system-management">&lt;/span>
+&lt;a href="#dxflow-file-system-management" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis">&lt;/span>
+&lt;a href="#synopsis" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Filesystem management commands for &lt;code>dxflow fs&lt;/code>.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage">&lt;/span>
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs &lt;COMMAND> [flags]&lt;/p>
+&lt;h3>Inherited Options&lt;span class="hx-absolute -hx-mt-20" id="inherited-options">&lt;/span>
+&lt;a href="#inherited-options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>config-profile&lt;/strong> (&lt;code>-C&lt;/code>): Specifies the config profile. Default: &lt;code>default&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>log-level&lt;/strong> (&lt;code>-L&lt;/code>): Sets the log level. Options: &lt;code>debug&lt;/code>, &lt;code>error&lt;/code>, &lt;code>disabled&lt;/code>. Default: &lt;code>disabled&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>no-color&lt;/strong> (&lt;code>-N&lt;/code>): Disables color output. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs create&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-create">&lt;/span>
+&lt;a href="#dxflow-fs-create" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-1">&lt;/span>
+&lt;a href="#synopsis-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Create a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-1">&lt;/span>
+&lt;a href="#usage-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs create &lt;IDENTITY> [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options">&lt;/span>
+&lt;a href="#options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>directory&lt;/strong> (&lt;code>-d&lt;/code>): Make a directory. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>force&lt;/strong> (&lt;code>-f&lt;/code>): Force creation if the object already exists. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the create command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs delete&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-delete">&lt;/span>
+&lt;a href="#dxflow-fs-delete" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-2">&lt;/span>
+&lt;a href="#synopsis-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Delete a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-2">&lt;/span>
+&lt;a href="#usage-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs delete &lt;IDENTITY> [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-1">&lt;/span>
+&lt;a href="#options-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the delete command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs download&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-download">&lt;/span>
+&lt;a href="#dxflow-fs-download" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-3">&lt;/span>
+&lt;a href="#synopsis-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Download a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-3">&lt;/span>
+&lt;a href="#usage-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs download &lt;IDENTITY> [DESTINATION] [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-2">&lt;/span>
+&lt;a href="#options-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>force&lt;/strong> (&lt;code>-f&lt;/code>): Force creation if the object already exists. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the download command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs list&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-list">&lt;/span>
+&lt;a href="#dxflow-fs-list" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-4">&lt;/span>
+&lt;a href="#synopsis-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>List filesystem objects.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-4">&lt;/span>
+&lt;a href="#usage-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs list [DIRECTORY] [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-3">&lt;/span>
+&lt;a href="#options-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>all&lt;/strong> (&lt;code>-a&lt;/code>): Include hidden objects. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>depth&lt;/strong> (&lt;code>-d&lt;/code>): Depth of subdirectories to include. Default: &lt;code>0&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>pattern&lt;/strong> (&lt;code>-p&lt;/code>): Pattern to filter objects.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the list command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs rename&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-rename">&lt;/span>
+&lt;a href="#dxflow-fs-rename" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-5">&lt;/span>
+&lt;a href="#synopsis-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Rename a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-5">&lt;/span>
+&lt;a href="#usage-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs rename &lt;IDENTITY> &amp;lt;NEW_IDENTITY&amp;gt; [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-4">&lt;/span>
+&lt;a href="#options-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the rename command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs share&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-share">&lt;/span>
+&lt;a href="#dxflow-fs-share" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-6">&lt;/span>
+&lt;a href="#synopsis-6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Share a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-6">&lt;/span>
+&lt;a href="#usage-6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs share &lt;IDENTITY> [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-5">&lt;/span>
+&lt;a href="#options-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>lifetime&lt;/strong> (&lt;code>-l&lt;/code>): Lifetime of the share. Default: &lt;code>5m&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>writable&lt;/strong> (&lt;code>-w&lt;/code>): Mark as writable object. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the share command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs unzip&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-unzip">&lt;/span>
+&lt;a href="#dxflow-fs-unzip" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-7">&lt;/span>
+&lt;a href="#synopsis-7" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Unzip a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-7">&lt;/span>
+&lt;a href="#usage-7" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs unzip &lt;IDENTITY> [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-6">&lt;/span>
+&lt;a href="#options-6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>quiet&lt;/strong> (&lt;code>-q&lt;/code>): Suppress progress output. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the unzip command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs upload&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-upload">&lt;/span>
+&lt;a href="#dxflow-fs-upload" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-8">&lt;/span>
+&lt;a href="#synopsis-8" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Upload a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-8">&lt;/span>
+&lt;a href="#usage-8" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs upload &lt;SOURCE> [IDENTITY] [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-7">&lt;/span>
+&lt;a href="#options-7" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>force&lt;/strong> (&lt;code>-f&lt;/code>): Force creation if the object already exists. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the upload command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow fs zip&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-fs-zip">&lt;/span>
+&lt;a href="#dxflow-fs-zip" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-9">&lt;/span>
+&lt;a href="#synopsis-9" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Zip a filesystem object.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-9">&lt;/span>
+&lt;a href="#usage-9" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow fs zip &lt;IDENTITY> [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-8">&lt;/span>
+&lt;a href="#options-8" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>quiet&lt;/strong> (&lt;code>-q&lt;/code>): Suppress progress output. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the zip command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul></description></item><item><title/><link>https://www.dxflow.ai/cli/key/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.dxflow.ai/cli/key/</guid><description>
+&lt;h1>dxflow key&lt;/h1>&lt;p>The &lt;code>dxflow key&lt;/code> command provides a suite of subcommands to manage authentication keys. A key is a 2048-bit RSA key-pair used for authenticating with the dxflow engine. Each key is bound to an identity (similar to a username) and can be assigned one or more permissions (&lt;code>read&lt;/code>, &lt;code>write&lt;/code>, &lt;code>execute&lt;/code>, &lt;code>admin&lt;/code>).&lt;/p>
+&lt;hr>
+&lt;h2>dxflow Key Management&lt;span class="hx-absolute -hx-mt-20" id="dxflow-key-management">&lt;/span>
+&lt;a href="#dxflow-key-management" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis">&lt;/span>
+&lt;a href="#synopsis" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Authentication key management commands for &lt;code>dxflow key&lt;/code>.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage">&lt;/span>
+&lt;a href="#usage" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow key &lt;COMMAND> [flags]&lt;/p>
+&lt;h3>Inherited Options&lt;span class="hx-absolute -hx-mt-20" id="inherited-options">&lt;/span>
+&lt;a href="#inherited-options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>config-profile&lt;/strong> (&lt;code>-C&lt;/code>): Specifies the config profile. Default: &lt;code>default&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>log-level&lt;/strong> (&lt;code>-L&lt;/code>): Sets the log level. Options: &lt;code>debug&lt;/code>, &lt;code>error&lt;/code>, &lt;code>disabled&lt;/code>. Default: &lt;code>disabled&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>no-color&lt;/strong> (&lt;code>-N&lt;/code>): Disables color output. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow key list&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-key-list">&lt;/span>
+&lt;a href="#dxflow-key-list" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-1">&lt;/span>
+&lt;a href="#synopsis-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>List authorized keys.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-1">&lt;/span>
+&lt;a href="#usage-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow key list [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options">&lt;/span>
+&lt;a href="#options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>all&lt;/strong> (&lt;code>-a&lt;/code>): Include disabled keys. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the list command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow key register&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-key-register">&lt;/span>
+&lt;a href="#dxflow-key-register" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-2">&lt;/span>
+&lt;a href="#synopsis-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Register an authorized key.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-2">&lt;/span>
+&lt;a href="#usage-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow key register &lt;KEY> [flags]&lt;/p>
+&lt;h3>Key Details&lt;span class="hx-absolute -hx-mt-20" id="key-details">&lt;/span>
+&lt;a href="#key-details" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;code>&amp;lt;KEY&amp;gt;&lt;/code>: A 2048-bit RSA key-pair used for authentication.&lt;/li>
+&lt;li>&lt;strong>key identity&lt;/strong> (&lt;code>-i&lt;/code>): Arbitrary value that uniquely identifies the key (similar to a username).&lt;/li>
+&lt;li>&lt;strong>permissions&lt;/strong> (&lt;code>-p&lt;/code>): Assign one or more permissions. Valid values: &lt;code>read&lt;/code>, &lt;code>write&lt;/code>, &lt;code>execute&lt;/code>, &lt;code>admin&lt;/code>. Default: &lt;code>[]&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-1">&lt;/span>
+&lt;a href="#options-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the register command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2>&lt;code>dxflow key unregister&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="dxflow-key-unregister">&lt;/span>
+&lt;a href="#dxflow-key-unregister" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Synopsis&lt;span class="hx-absolute -hx-mt-20" id="synopsis-3">&lt;/span>
+&lt;a href="#synopsis-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Unregister an authorized key.&lt;/p>
+&lt;h3>Usage&lt;span class="hx-absolute -hx-mt-20" id="usage-3">&lt;/span>
+&lt;a href="#usage-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>dxflow key unregister &lt;IDENTITY> [flags]&lt;/p>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options-2">&lt;/span>
+&lt;a href="#options-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>help&lt;/strong> (&lt;code>-h&lt;/code>): Displays help information for the unregister command. Default: &lt;code>false&lt;/code>.&lt;/li>
+&lt;/ul></description></item><item><title/><link>https://www.dxflow.ai/cli/profiles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.dxflow.ai/cli/profiles/</guid><description>
+&lt;p>The purpose of &lt;code>profiles&lt;/code> is to create a set for environmental variables that can be used to configure the dxflow engine. This allows you to easily switch between different configurations without having to manually set the environmental variables each time.
+It is especially useful when you want to connect to different dxflow engines or when you want to use different configurations for different workflows.&lt;/p>
+&lt;p>IF you don&amp;rsquo;t want to use profile you can set the environmental variables directly in your shell or in your workflow file. The &lt;code>profiles&lt;/code> are just a convenient way to manage the environmental variables. The&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">🔧&lt;/div>&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">All the config variables can be set in the Environment by using Environment case method (all capital with _ instead of -).&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>define profile:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dxflow.exe -C &amp;lt;PROFILE_NAME&amp;gt; config &amp;lt;variable&amp;gt; &amp;lt;value&amp;gt;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Profiles information are stored at &lt;code>~/.dxflow/PROFILE_NAME_config.yaml&lt;/code>, if you want to remove the profile from your dxflow, you can just delete the file manually.&lt;/p>
+&lt;p>There are several variables that can be set in the profile, such as:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>http-port&lt;/code>: The port on which the dxflow engine will listen for HTTP requests. Default is &lt;code>80&lt;/code>.&lt;/li>
+&lt;li>&lt;code>connection-address&lt;/code>: The (IP) address of the dxflow engine. Default is &lt;code>0.0.0.0&lt;/code>.&lt;/li>
+&lt;li>&lt;code>volume&lt;/code>: The volume where the dxflow engine will store its data. Default is &lt;code>~/.dxflow&lt;/code> for Linux and MacOS, and &lt;code>C:\ProgramData\dxflow&lt;/code> for Windows.&lt;/li>
+&lt;li>&lt;code>secret&lt;/code>: dxflow generate a secret key everytime use run it. To use a constant secret key, you can define it in the config file or environment variable.
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">⚠️&lt;/div>&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This method is not recommended for production use, as it is not secure.We suggest to use use the default method as its secrets have expiration time.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;/ul>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dxflow.exe config secret &amp;lt;secret&amp;gt;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>In order to remove a config use &lt;code>unset&lt;/code> command:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dxflow.exe -C &amp;lt;PROFILE_NAME&amp;gt; config &lt;span class="nb">unset&lt;/span> &amp;lt;variable&amp;gt;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">🔧&lt;/div>&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">If you don&amp;rsquo;t use the &lt;code>-C&lt;/code> flag, the default profile will be used. The default profile is created automatically when you run the &lt;code>dxflow&lt;/code> command for the first time. You can also create a new profile by using the &lt;code>-C&lt;/code> flag with any name you want.&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
