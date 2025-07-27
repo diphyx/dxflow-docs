@@ -11,7 +11,7 @@ fi
 OS=$(uname -s)
 case "$OS" in
     Linux)
-        OS="linux"
+        OS="darwin"
         ;;
     Darwin)
         OS="mac"
@@ -48,10 +48,22 @@ esac
 echo "Installing dxflow ..."
 # Define a temporary directory for download
 TEMP_DIR=$(mktemp -d)
-CLI_ARCHIVE="${TEMP_DIR}/dxflow_${OS}_${ARCH}.tar.gz"
-
+# Retrieve the latest version tag from GitHub without using jq
+LATEST_URL=$(curl -s https://api.github.com/repos/diphyx/dxflow-docs/tags | grep -m 1 '"name":' | sed -E 's/.*"name": *"([^"]+)".*/\1/')
+if [ -z "$LATEST_URL" ]; then
+    echo "Error: Unable to retrieve the latest version tag from GitHub."
+    exit 1
+fi
+echo "Latest release tag: ${LATEST_URL}"
+VERSION=$(basename "${LATEST_URL}")
+CLEAN_VERSION=${VERSION#v}
+echo "Downloading dxflow version ${CLEAN_VERSION} for ${OS} ${ARCH}..."
+CLI_ARCHIVE="${TEMP_DIR}/dxflow_${CLEAN_VERSION}_${OS}_${ARCH}.tar.gz"
+# Remove the leading "v" from the version for the file name
+GITHUB_URL="https://github.com/diphyx/dxflow-docs/releases/download/v${CLEAN_VERSION}/dxflow_${CLEAN_VERSION}_${OS}_${ARCH}.tar.gz"
+echo "Downloading from: ${GITHUB_URL}"
 # Download the CLI archive
-wget -qO "${CLI_ARCHIVE}" "https://github.com/diphyx/dxflow-docs/releases/download/v1.0.0/dxflow_1.0.0_${OS}_${ARCH}.tar.gz"
+wget -qO "${CLI_ARCHIVE}" "${GITHUB_URL}"
 if [ $? -ne 0 ]; then
     echo "Failed to download ${CLI} from GitHub"
     echo "Please check your internet connection and try again"
