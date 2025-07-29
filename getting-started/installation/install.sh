@@ -11,10 +11,10 @@ fi
 OS=$(uname -s)
 case "$OS" in
     Linux)
-        OS="darwin"
+        OS="linux"
         ;;
     Darwin)
-        OS="mac"
+        OS="darwin"
         ;;
     *)
         echo "Unsupported OS: $OS"
